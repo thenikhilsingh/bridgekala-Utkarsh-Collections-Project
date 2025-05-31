@@ -66,7 +66,7 @@ const JewelryBlog = () => {
           onClick={prevSlide}
           aria-label="Previous"
           className="p-3 bg-gray-600 rounded-full shadow hover:bg-gray-500 cursor-pointer"
-          style={{ position: "relative", zIndex: 10 }}
+          style={{ position: "relative"}}
         >
           <Icon path={mdiChevronLeft} size={1} />
         </button>
@@ -97,7 +97,7 @@ const JewelryBlog = () => {
           onClick={nextSlide}
           aria-label="Next"
           className="p-3 bg-gray-600 rounded-full shadow hover:bg-gray-500 cursor-pointer"
-          style={{ position: "relative", zIndex: 10 }}
+          style={{ position: "relative" }}
         >
           <Icon path={mdiChevronRight} size={1} />
         </button>
