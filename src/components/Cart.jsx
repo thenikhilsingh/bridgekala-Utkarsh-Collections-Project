@@ -16,7 +16,7 @@ export default function Cart() {
   const total = subtotal + shipping + platformFee;
 
   return (
-    <div className=" pt-50 flex justify-around flex-wrap gap-8">
+    <div className="pt-50 flex justify-around flex-wrap gap-8 pb-20">
       <div className="w-80">
         <h1 className="font-bold text-4xl pb-6">Cart</h1>
         {cartItems.length === 0 ? (

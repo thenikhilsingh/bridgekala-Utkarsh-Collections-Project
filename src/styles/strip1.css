@@ -1,15 +1,19 @@
 .strip-track {
-  animation: scroll-loop 15s linear infinite;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.scroll-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-loop 20s linear infinite;
 }
 
 @keyframes scroll-loop {
   0% {
-    transform: translateX(-150%);
+    transform: translateX(0%);
   }
-  /* 50% {
-    transform: translateX(50%);
-  } */
   100% {
-    transform: translateX(150%);
+    transform: translateX(-50%);
   }
 }

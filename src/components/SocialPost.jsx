@@ -26,7 +26,7 @@ export default function SocialPost() {
   };
 
   return (
-    <div className="flex flex-wrap items-center justify-center mt-5 gap-5">
+    <div className="flex flex-wrap items-center justify-center mt-5 gap-5 ">
       {post.map((item, index) => (
         <div
           key={index}
@@ -53,7 +53,7 @@ export default function SocialPost() {
           )}
 
           <Icon
-            className="absolute top-2 right-2 text-white drop-shadow hover:scale-110 active:scale-95 z-10"
+            className="absolute top-2 right-2 text-white drop-shadow hover:scale-110 active:scale-95 z-0"
             path={playingIndex === index ? mdiPause : mdiPlay}
             size={1}
             onClick={(e) => {
@@ -63,7 +63,7 @@ export default function SocialPost() {
           />
 
           <img
-            className="size-5 absolute bottom-2 right-2 hover:scale-120 active:translate-y-0.5 z-10"
+            className="size-5 absolute bottom-2 right-2 hover:scale-120 active:translate-y-0.5 z-0"
             src="instagram.webp"
             alt=""
             onClick={(e) => {

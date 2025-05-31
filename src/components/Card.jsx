@@ -66,7 +66,7 @@ export default function Card() {
                   </p>
                 </div>
                 <button
-                  className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-3 py-1 rounded"
+                  className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-3 py-1 rounded cursor-pointer"
                   onClick={() => {
                     addToCart(item);
                   }}

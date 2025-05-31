@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import OurBlogPosts from "./OurBlogPosts";
+import Icon from "@mdi/react";
+import { mdiWhatsapp } from "@mdi/js";
 
 const images = [
   "banner1.webp",
@@ -49,8 +51,6 @@ export default function Home() {
           }}
           spaceBetween={0}
           centeredSlides={true}
-          // onSlideChange={() => console.log("slide change")}
-          // onSwiper={(swiper) => (swiperRef.current = swiper)}
           modules={[Autoplay]}
         >
           {images.map((src, i) => (
@@ -77,20 +77,20 @@ export default function Home() {
               <h3 class="text-xl font-bold mb-4">Daily Wear/Earrings</h3>
             </div>
             <img src="cat1.png" alt="Sofa" className=" mx-auto size-40" />
-            <button class="bg-black text-white text-sm px-4 py-2 rounded hover:bg-gray-800 self-start">
+            <button class="bg-black text-white text-sm px-4 py-2 rounded hover:bg-gray-800 self-start cursor-pointer">
               SHOP NOW
             </button>
           </div>
 
           {/* <!-- Card 2 --> */}
-          <div class="bg-blue-100 p-6 rounded-lg w-[200px] flex flex-col justify-between items-center hover:bg-blue-200">
+          <div class="bg-blue-100 p-6 rounded-lg w-[200px] flex flex-col justify-between items-center hover:bg-blue-200 ">
             <div>
               <h3 class="text-xl font-bold mb-4 flex text-center">
                 Earrings under 199
               </h3>
             </div>
             <img src="cat2.png" alt="Sofa" className=" mx-auto size-40" />
-            <button class="bg-blue-500 text-white text-sm px-4 py-2 rounded hover:bg-blue-400">
+            <button class="bg-blue-500 text-white text-sm px-4 py-2 rounded hover:bg-blue-400 cursor-pointer">
               SHOP NOW
             </button>
           </div>
@@ -101,7 +101,7 @@ export default function Home() {
               <h3 class="text-xl font-bold mb-4 text-center">TOY TRAIN</h3>
             </div>
             <img src="cat3.png" alt="Sofa" className=" mx-auto size-40" />
-            <button class="bg-[#b8af5e] text-white text-sm px-4 py-2 rounded hover:bg-[#dfd57a]">
+            <button class="bg-[#b8af5e] text-white text-sm px-4 py-2 rounded hover:bg-[#dfd57a] cursor-pointer">
               SHOP NOW
             </button>
           </div>
@@ -112,7 +112,7 @@ export default function Home() {
               <h3 class="text-xl font-bold mb-4 text-center">TOY TRAIN</h3>
             </div>
             <img src="cat4.png" alt="Sofa" className=" mx-auto size-40" />
-            <button class="bg-[#fc7cf5] text-white text-sm px-4 py-2 rounded hover:bg-[#f899f3]">
+            <button class="bg-[#fc7cf5] text-white text-sm px-4 py-2 rounded hover:bg-[#f899f3] cursor-pointer">
               SHOP NOW
             </button>
           </div>
@@ -123,7 +123,7 @@ export default function Home() {
               <h3 class="text-xl font-bold mb-4 text-center">PARTY DECORS</h3>
             </div>
             <img src="cat5.png" alt="Sofa" className=" mx-auto size-40" />
-            <button class="bg-[#2bf1d7] text-white text-sm px-4 py-2 rounded hover:bg-[#7affed] ">
+            <button class="bg-[#2bf1d7] text-white text-sm px-4 py-2 rounded hover:bg-[#7affed] cursor-pointer">
               SHOP NOW
             </button>
           </div>
@@ -134,7 +134,7 @@ export default function Home() {
               <h3 class="text-xl font-bold mb-4">DIAMOND RING</h3>
             </div>
             <img src="cat6.png" alt="Sofa" className=" mx-auto size-40" />
-            <button class="bg-red-600 text-white text-sm px-4 py-2 rounded hover:bg-red-700 self-start">
+            <button class="bg-red-600 text-white text-sm px-4 py-2 rounded hover:bg-red-700 self-start cursor-pointer">
               SHOP NOW
             </button>
           </div>
@@ -224,11 +224,7 @@ export default function Home() {
         target="_blank"
         className="fixed bottom-6 right-6 flex items-center justify-center w-16 h-16 bg-green-500 rounded-full shadow-lg z-50"
       >
-        <img
-          src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png"
-          alt="Chat with us"
-          className="w-8 h-8"
-        />
+        <Icon path={mdiWhatsapp} className="w-8 h-8" color="white" />
       </a>
     </div>
   );
