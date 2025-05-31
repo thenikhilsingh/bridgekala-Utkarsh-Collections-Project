@@ -29,19 +29,6 @@ export default function Home() {
 
   return (
     <div className="pt-[25vh]  overflow-hidden relative">
-      {/* <div
-        className="flex transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateX(-${index * 100}%)` }}
-      >
-        {images.map((src, i) => (
-          <img
-            key={i}
-            src={src}
-            alt={`Slide ${i}`}
-            className="w-full flex-shrink-0 h-99 "
-          />
-        ))}
-      </div> */}
       <div>
         <Swiper
           loop
@@ -64,14 +51,12 @@ export default function Home() {
           ))}
         </Swiper>
       </div>
-      {/* productbycategory */}
       <div class="p-8 bg-white">
         <h2 class="text-3xl font-semibold text-center mb-8">
           Product Categories
         </h2>
 
         <div class="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto w-[1000px]">
-          {/* <!-- Card 1 --> */}
           <div class="bg-gray-100 p-6 rounded-lg w-[400px] flex flex-col  justify-between hover:bg-gray-200">
             <div>
               <h3 class="text-xl font-bold mb-4">Daily Wear/Earrings</h3>
@@ -82,7 +67,6 @@ export default function Home() {
             </button>
           </div>
 
-          {/* <!-- Card 2 --> */}
           <div class="bg-blue-100 p-6 rounded-lg w-[200px] flex flex-col justify-between items-center hover:bg-blue-200 ">
             <div>
               <h3 class="text-xl font-bold mb-4 flex text-center">
@@ -95,7 +79,6 @@ export default function Home() {
             </button>
           </div>
 
-          {/* <!-- Card 3 --> */}
           <div class="bg-yellow-100 p-6 rounded-lg w-[200px] flex flex-col justify-between items-center hover:bg-yellow-200">
             <div>
               <h3 class="text-xl font-bold mb-4 text-center">TOY TRAIN</h3>
@@ -106,7 +89,6 @@ export default function Home() {
             </button>
           </div>
 
-          {/* <!-- Card 4 --> */}
           <div class="bg-orange-100 p-6 rounded-lg w-[200px] flex flex-col justify-between items-center hover:bg-orange-200">
             <div>
               <h3 class="text-xl font-bold mb-4 text-center">TOY TRAIN</h3>
@@ -117,7 +99,6 @@ export default function Home() {
             </button>
           </div>
 
-          {/* <!-- Card 5 --> */}
           <div class="bg-green-100 p-6 rounded-lg w-[200px] flex flex-col justify-between items-center hover:bg-green-200">
             <div>
               <h3 class="text-xl font-bold mb-4 text-center">PARTY DECORS</h3>
@@ -128,7 +109,6 @@ export default function Home() {
             </button>
           </div>
 
-          {/* <!-- Card 6 --> */}
           <div class="bg-pink-100 p-6 rounded-lg w-[400px] flex flex-col justify-between hover:bg-pink-200">
             <div>
               <h3 class="text-xl font-bold mb-4">DIAMOND RING</h3>
@@ -144,7 +124,6 @@ export default function Home() {
       <UtkarshCollectionPosts />
       <TopSellingItems />
       <div className="flex flex-col lg:flex-row items-center justify-between p-8 lg:p-16 bg-white relative">
-        {/* Text Section */}
         <div className="lg:w-1/2 mb-10 lg:mb-0">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Elevate Your Style: Explore Exclusive <br />
@@ -164,7 +143,6 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Image Section */}
         <div className="lg:w-1/2 flex justify-center gap-6">
           <img
             src="luxury-product-1.webp"
@@ -181,7 +159,6 @@ export default function Home() {
       (
       <div className="bg-gray-50 py-12 px-4 lg:px-20 text-center">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Free Gift */}
           <div className="flex flex-col items-center space-y-4">
             <img src="gifticon.webp" alt="Free Gift" className="size-15" />
             <h3 className="text-lg font-semibold">Free Gift</h3>
@@ -190,7 +167,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* 5% Extra Discount */}
           <div className="flex flex-col items-center space-y-4">
             <img
               src="discounticon.webp"
@@ -203,7 +179,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* 100% Secure Checkout */}
           <div className="flex flex-col items-center space-y-4">
             <img
               src="checkouticon.webp"
@@ -218,7 +193,6 @@ export default function Home() {
         </div>
       </div>
       <OurBlogPosts />
-      {/* WhatsApp Floating Button */}
       <a
         href="https://wa.me/+919911819654"
         target="_blank"

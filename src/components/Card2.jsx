@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import topSellItem from "./topSellingItemsData";
 import Icon from "@mdi/react";
 import { mdiHeartOutline, mdiHeart } from "@mdi/js";
-import { useCart } from "./CartContext"; // ✅ Import useCart
+import { useCart } from "./CartContext"; 
 
 export default function Card2() {
   const [likedItems, setLikedItems] = useState([]);
-  const { addToCart } = useCart(); // ✅ Use Cart Context
+  const { addToCart } = useCart(); 
 
   const toggleHeart = (index) => {
     setLikedItems((prev) =>
@@ -69,7 +69,7 @@ export default function Card2() {
                   <button
                     className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-3 py-1 rounded cursor-pointer"
                     onClick={() => {
-                      addToCart(item); // ✅ Add to cart
+                      addToCart(item); 
                     }}
                   >
                     + Cart
