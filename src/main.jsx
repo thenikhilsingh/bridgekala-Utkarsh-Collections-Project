@@ -12,22 +12,27 @@ import Home from "./components/Home.jsx";
 import Shop from "./components/Shop.jsx";
 import Blog from "./components/Blog.jsx";
 import ContactUs from "./components/ContactUs.jsx";
+import Cart from "./components/Cart.jsx";
+import { CartProvider } from "./components/CartContext.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route path="" element={<Home />}></Route>
-      <Route path="shop" element={<Shop />}></Route>
-      <Route path="blog" element={<Blog />}></Route>
-      <Route path="contact-us" element={<ContactUs />}></Route>
-      {/* <Route path="shop/product/:productid" element={<ProductDetail />}></Route>
-      <Route path="message" element={<Message />}></Route> */}
+      <Route index element={<Home />} />
+      <Route path="shop" element={<Shop />} />
+      <Route path="blog" element={<Blog />} />
+      <Route path="contact-us" element={<ContactUs />} />
+      <Route path="cart" element={<Cart />} />
     </Route>
   )
 );
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider>
+      {" "}
+      {/* ✅ Wrap everything */}
+      <RouterProvider router={router} />
+    </CartProvider>
   </StrictMode>
 );
