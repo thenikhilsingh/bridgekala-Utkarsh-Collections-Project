@@ -22,9 +22,11 @@ export const Header = () => {
 
   return (
     <div className="flex justify-around items-center shadow-lg fixed mt-[8vh] w-[100vw] z-10 bg-white py-4">
-      <div>
-        <img className="size-25" src="logo.webp" alt="" />
-      </div>
+      <NavLink to="/">
+        <div>
+          <img className="size-25" src="logo.webp" alt="" />
+        </div>
+      </NavLink>
 
       <div className="flex font-bold gap-8">
         <NavLink to="/" className={linkClass}>
