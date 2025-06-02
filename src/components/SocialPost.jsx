@@ -58,7 +58,7 @@ export default function SocialPost() {
             )}
 
             <Icon
-              className="absolute top-2 right-2 text-white drop-shadow hover:scale-110 active:scale-95 z-10"
+              className="absolute top-2 right-2 text-white drop-shadow hover:scale-110 active:scale-95"
               path={playingIndex === index ? mdiPause : mdiPlay}
               size={1}
               onClick={(e) => {
@@ -68,12 +68,12 @@ export default function SocialPost() {
             />
 
             <img
-              className="size-5 absolute bottom-2 right-2 hover:scale-120 active:translate-y-0.5 z-10"
+              className="size-5 absolute bottom-2 right-2 hover:scale-120 active:translate-y-0.5"
               src="instagram.webp"
               alt=""
               onClick={(e) => {
                 e.stopPropagation();
-                window.open(item.reel, "_blank");
+                window.open(item.reel, "_blank"); 
               }}
             />
           </div>
