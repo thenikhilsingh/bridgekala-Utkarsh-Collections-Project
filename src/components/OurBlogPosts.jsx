@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Icon from "@mdi/react";
 import { mdiChevronLeft, mdiChevronRight } from "@mdi/js";
+
 const blogPosts = [
   {
     img: "blogimg1.webp",
@@ -59,32 +60,37 @@ const JewelryBlog = () => {
   }
 
   return (
-    <div>
-      <h1 className="text-3xl font-semibold text-center mb-8">From Our Blog</h1>
-      <div className="max-w-4xl mx-auto py-10 flex items-center justify-center gap-6 relative">
+    <div className="px-4">
+      <h1 className="text-2xl md:text-3xl font-semibold text-center mb-6 md:mb-8">
+        From Our Blog
+      </h1>
+
+      <div className="max-w-full md:max-w-4xl mx-auto py-4 md:py-10 flex items-center justify-center gap-3 md:gap-6 relative flex-wrap md:flex-nowrap">
+        
+        
         <button
           onClick={prevSlide}
           aria-label="Previous"
-          className="p-3 bg-gray-600 rounded-full shadow hover:bg-gray-500 cursor-pointer"
-          style={{ position: "relative"}}
+          className="hidden md:block p-2 md:p-3 bg-gray-600 rounded-full shadow hover:bg-gray-500 cursor-pointer"
         >
           <Icon path={mdiChevronLeft} size={1} />
         </button>
 
-        <div className="flex gap-4">
+        {/* Blog Cards */}
+        <div className="flex gap-3 overflow-x-auto md:overflow-visible">
           {visibleSlides.map((post, idx) => (
             <div
               key={idx}
-              className="w-[300px] h-[300px] bg-white rounded shadow overflow-hidden text-sm flex-shrink-0"
+              className="w-[260px] sm:w-[280px] md:w-[200px] lg:w-[280px] flex-shrink-0 bg-white rounded shadow overflow-hidden text-sm"
             >
               <img
                 src={post.img}
                 alt={post.alt}
-                className="w-full h-[140px] object-cover"
+                className="w-full h-[130px] sm:h-[140px] object-cover"
               />
-              <div className="p-3 h-[220px] overflow-hidden">
+              <div className="p-3 h-[180px] sm:h-[200px] overflow-hidden">
                 <p className="text-gray-500 text-xs mb-1">{post.date}</p>
-                <h2 className="font-semibold text-base mb-1 leading-tight">
+                <h2 className="font-semibold text-sm sm:text-base mb-1 leading-tight">
                   {post.title}
                 </h2>
                 <p className="text-gray-700 text-xs">{post.desc}</p>
@@ -93,14 +99,15 @@ const JewelryBlog = () => {
           ))}
         </div>
 
+        
         <button
           onClick={nextSlide}
           aria-label="Next"
-          className="p-3 bg-gray-600 rounded-full shadow hover:bg-gray-500 cursor-pointer"
-          style={{ position: "relative" }}
+          className="hidden md:block p-2 md:p-3 bg-gray-600 rounded-full shadow hover:bg-gray-500 cursor-pointer"
         >
           <Icon path={mdiChevronRight} size={1} />
         </button>
+
       </div>
     </div>
   );

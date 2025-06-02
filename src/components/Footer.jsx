@@ -9,103 +9,92 @@ import {
 
 export const Footer = () => {
   return (
-    <div className="bg-black text-white p-6">
-      <div className="flex justify-around ">
-        <div className="w-45 flex flex-col gap-5">
-          <img className="invert size-30" src="logo.webp" alt="" />
-          <p>
+    <div className="bg-black text-white px-4 py-8">
+      <div className="flex flex-col md:flex-row md:justify-around gap-6 md:gap-0">
+        {/* Company Info */}
+        <div className="w-full md:w-1/5 flex flex-col gap-5">
+          <img className="invert size-10" src="logo.webp" alt="Logo" />
+          <p className="text-xs">
             We’re a tiny little company based in New Delhi trying to bring you
             the latest fashion of the best quality at the lowest possible
             prices.
           </p>
-          <img className="size-10" src="instagram.webp" alt="" />
+          <img className="size-10" src="instagram.webp" alt="Instagram" />
         </div>
 
-        <div className="w-45 flex flex-col gap-5 mt-4">
-          <h1 className="font-bold">Quick Links</h1>
-          <div>
-            <div className="flex">
-              <Icon path={mdiChevronRight} size={1} /> Home
-            </div>
-            <div className="flex">
-              <Icon path={mdiChevronRight} size={1} /> Shop
-            </div>
-            <div className="flex">
-              <Icon path={mdiChevronRight} size={1} /> Blog
-            </div>
-            <div className="flex">
-              <Icon path={mdiChevronRight} size={1} /> Contact Us
-            </div>
+        {/* Quick Links */}
+        <div className="w-full md:w-1/5 flex flex-col gap-3 mt-4">
+          <h1 className="font-bold text-sm">Quick Links</h1>
+          <div className="text-xs flex flex-col gap-2">
+            {["Home", "Shop", "Blog", "Contact Us"].map((item, idx) => (
+              <div key={idx} className="flex items-center gap-1">
+                <Icon className="size-4" path={mdiChevronRight} /> {item}
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="w-45 flex flex-col gap-5 mt-4">
-          <h1 className="font-bold">Categories</h1>
-          <div>
-            <div className="flex">
-              <Icon path={mdiChevronRight} size={1} /> Daily Wear/Earings
-            </div>
-            <div className="flex">
-              <Icon path={mdiChevronRight} size={1} /> Earings under 199
-            </div>
-            <div className="flex">
-              <Icon path={mdiChevronRight} size={1} /> Combos
-            </div>
-            <div className="flex">
-              <Icon path={mdiChevronRight} size={1} /> Choker/Necklace
-            </div>
-            <div className="flex">
-              <Icon path={mdiChevronRight} size={1} /> Kundan Jewelry
-            </div>
+        {/* Categories */}
+        <div className="w-full md:w-1/5 flex flex-col gap-3 mt-4">
+          <h1 className="font-bold text-sm">Categories</h1>
+          <div className="text-xs flex flex-col gap-2">
+            {[
+              "Daily Wear/Earings",
+              "Earings under 199",
+              "Combos",
+              "Choker/Necklace",
+              "Kundan Jewelry",
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-center gap-1">
+                <Icon className="size-4" path={mdiChevronRight} /> {item}
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="w-45 flex flex-col gap-5 mt-4">
-          <h1 className="font-bold">Policies</h1>
-          <div>
-            <div className="flex">
-              <Icon path={mdiChevronRight} size={1} /> Privacy Policy
-            </div>
-            <div className="flex">
-              <Icon path={mdiChevronRight} size={1} /> Terms and Conditions
-            </div>
-            <div className="flex">
-              <Icon path={mdiChevronRight} size={1} /> Cancellation & Refund
-              Policy
-            </div>
-            <div className="flex">
-              <Icon path={mdiChevronRight} size={1} /> Privacy & Payments
-            </div>
-            <div className="flex">
-              <Icon path={mdiChevronRight} size={1} /> Shipping & Tracking
-            </div>
-            <div className="flex">
-              <Icon path={mdiChevronRight} size={1} /> Disclaimer Policy
-            </div>
+        {/* Policies */}
+        <div className="w-full md:w-1/5 flex flex-col gap-3 mt-4">
+          <h1 className="font-bold text-sm">Policies</h1>
+          <div className="text-xs flex flex-col gap-2">
+            {[
+              "Privacy Policy",
+              "Terms and Conditions",
+              "Cancellation & Refund Policy",
+              "Privacy & Payments",
+              "Shipping & Tracking",
+              "Disclaimer Policy",
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-center gap-1">
+                <Icon className="size-4" path={mdiChevronRight} /> {item}
+              </div>
+            ))}
           </div>
         </div>
-        <div className="w-60 flex flex-col gap-5 mt-4">
-          <h1 className="font-bold">Get In Touch</h1>
-          <div>
-            <div className="flex gap-2">
-              <Icon path={mdiMapMarker} size={1} /> New Delhi - 110018
+
+        {/* Contact Info */}
+        <div className="w-full md:w-1/5 flex flex-col gap-3 mt-4">
+          <h1 className="font-bold text-sm">Get In Touch</h1>
+          <div className="text-xs flex flex-col gap-2">
+            <div className="flex items-center gap-2">
+              <Icon path={mdiMapMarker} className="size-4" />
+              New Delhi - 110018
             </div>
-            <div className="flex gap-2">
-              <Icon path={mdiPhoneClassic} size={1} />
+            <div className="flex items-center gap-2">
+              <Icon path={mdiPhoneClassic} className="size-4" />
               9953612665
             </div>
-            <div className="flex gap-2">
-              <Icon path={mdiEmailOutline} size={1} />
+            <div className="flex items-center gap-2">
+              <Icon path={mdiEmailOutline} className="size-4" />
               info@utkarshcollections.com
             </div>
           </div>
         </div>
       </div>
 
-      <hr className="text-gray-700 my-5" />
+      <hr className="border-gray-700 my-6" />
 
-      <div className="flex items-center justify-center ">
-        <div>© 2025 Utkarsh Collections</div>
+      <div className="text-center text-sm">
+        © 2025 Utkarsh Collections
       </div>
     </div>
   );
