@@ -29,7 +29,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="pt-[29vh] sm:pt-[30vh] md:pt-[31vh] overflow-hidden relative">
+    <div className="pt-[25vh] sm:pt-[30vh] md:pt-[31vh] overflow-hidden relative">
      
       <Swiper
         loop
