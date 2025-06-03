@@ -15,7 +15,7 @@ export default function Card() {
   };
 
   return (
-    <div className="flex gap-8 flex-wrap justify-center">
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-items-center mb-10">
       {newArrvlData.map((item, index) => {
         const original = Number(item.originalPrice);
         const discounted = Number(item.discountedPrice);
@@ -29,13 +29,13 @@ export default function Card() {
         return (
           <div
             key={index}
-            className="w-56 bg-white rounded-lg shadow-md overflow-hidden font-sans"
+            className="w-40 sm:w-44 md:w-48 lg:w-52 bg-white rounded-lg shadow-md overflow-hidden font-sans"
           >
             <div className="relative">
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-56 object-cover"
+                className="w-full h-44 object-cover"
               />
               <Icon
                 path={isLiked ? mdiHeart : mdiHeartOutline}
@@ -46,7 +46,7 @@ export default function Card() {
                 onClick={() => toggleHeart(index)}
               />
             </div>
-            <div className="p-4">
+            <div className="p-3">
               <h2 className="text-sm font-semibold text-gray-800 text-center h-12">
                 {item.title}
               </h2>

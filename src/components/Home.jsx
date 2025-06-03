@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <div className="pt-[29vh] sm:pt-[30vh] md:pt-[31vh] overflow-hidden relative">
-      {/* Banner Swiper */}
+     
       <Swiper
         loop
         autoplay={{ delay: 2500, disableOnInteraction: false }}
@@ -48,86 +48,87 @@ export default function Home() {
           </SwiperSlide>
         ))}
       </Swiper>
+     
+<div class="p-4 sm:p-6 md:p-8 bg-white">
+  <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-6 sm:mb-8">
+    Product Categories
+  </h2>
+   <hr className="w-full border-t-2 border-gray-300 mb-4" />
 
-      {/* Product Categories */}
-      <div className="p-4 md:p-8 bg-white">
-        <h2 className="text-3xl font-semibold text-center mb-6 md:mb-8">
-          Product Categories
-        </h2>
-
-        <div className="flex overflow-x-auto md:flex-wrap md:justify-center gap-4 md:gap-6 max-w-6xl mx-auto w-full pb-4">
-          {[
-            {
-              title: "Daily Wear/Earrings",
-              img: "cat1.png",
-              bg: "bg-gray-100",
-              hover: "hover:bg-gray-200",
-              btn: "bg-black hover:bg-gray-800",
-            },
-            {
-              title: "Earrings under 199",
-              img: "cat2.png",
-              bg: "bg-blue-100",
-              hover: "hover:bg-blue-200",
-              btn: "bg-blue-500 hover:bg-blue-400",
-            },
-            {
-              title: "TOY TRAIN",
-              img: "cat3.png",
-              bg: "bg-yellow-100",
-              hover: "hover:bg-yellow-200",
-              btn: "bg-[#b8af5e] hover:bg-[#dfd57a]",
-            },
-            {
-              title: "TOY TRAIN",
-              img: "cat4.png",
-              bg: "bg-orange-100",
-              hover: "hover:bg-orange-200",
-              btn: "bg-[#fc7cf5] hover:bg-[#f899f3]",
-            },
-            {
-              title: "PARTY DECORS",
-              img: "cat5.png",
-              bg: "bg-green-100",
-              hover: "hover:bg-green-200",
-              btn: "bg-[#2bf1d7] hover:bg-[#7affed]",
-            },
-            {
-              title: "DIAMOND RING",
-              img: "cat6.png",
-              bg: "bg-pink-100",
-              hover: "hover:bg-pink-200",
-              btn: "bg-red-600 hover:bg-red-700",
-            },
-          ].map((cat, i) => (
-            <div
-              key={i}
-              className={`${cat.bg} ${cat.hover} p-4 rounded-lg min-w-[200px] flex flex-col justify-between items-center`}
-            >
-              <h3 className="text-sm font-bold mb-4 text-center">
-                {cat.title}
-              </h3>
-              <img
-                src={cat.img}
-                alt={cat.title}
-                className="mx-auto size-20 mb-4"
-              />
-              <button
-                className={`${cat.btn} text-white text-sm px-4 py-2 rounded`}
-              >
-                SHOP NOW
-              </button>
-            </div>
-          ))}
-        </div>
+  <div class="flex flex-wrap justify-center gap-4 sm:gap-6 max-w-full md:max-w-6xl mx-auto">
+    
+    <div class="bg-gray-100 p-4 sm:p-6 rounded-lg w-full sm:w-[300px] md:w-[340px] lg:w-[400px] flex flex-col justify-between">
+      <div>
+        <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Daily Wear/Earrings</h3>
       </div>
+      <img src="cat1.png" alt="Sofa" className="mx-auto size-28 sm:size-32 md:size-36 lg:size-40" />
+      <button class="bg-black text-white text-sm px-4 py-2 rounded hover:bg-gray-800 self-start mt-4 transition cursor-pointer">
+        SHOP NOW
+      </button>
+    </div>
 
-      {/* Sections */}
+    
+    <div class="bg-blue-100 p-4 sm:p-6 rounded-lg w-[160px] sm:w-[200px] md:w-[220px] lg:w-[240px] flex flex-col justify-between">
+      <div>
+        <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">Earrings under 199</h3>
+      </div>
+      <img src="cat2.png" alt="Sofa" className="mx-auto size-28 sm:size-32 md:size-36 lg:size-40" />
+      <button class="bg-blue-500 text-white text-sm px-4 py-2 rounded hover:bg-blue-400 self-start mt-4 transition cursor-pointer">
+        SHOP NOW
+      </button>
+    </div>
+
+   
+    <div class="bg-yellow-100 p-4 sm:p-6 rounded-lg w-[160px] sm:w-[200px] md:w-[220px] lg:w-[240px] flex flex-col justify-between">
+      <div>
+        <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">TOY TRAIN</h3>
+      </div>
+      <img src="cat3.png" alt="Sofa" className="mx-auto size-28 sm:size-32 md:size-36 lg:size-40" />
+       <button class="bg-orange-600 text-white text-sm px-4 py-2 rounded hover:bg-orange-500 self-start mt-4 transition cursor-pointer">
+        SHOP NOW
+      </button>
+    </div>
+
+    
+    <div class="bg-orange-100 p-4 sm:p-6 rounded-lg w-[160px] sm:w-[200px] md:w-[220px] lg:w-[240px] flex flex-col justify-between">
+      <div>
+        <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">TOY TRAIN</h3>
+      </div>
+      <img src="cat4.png" alt="Sofa" className="mx-auto size-28 sm:size-32 md:size-36 lg:size-40" />
+       <button class="bg-pink-400 text-white text-sm px-4 py-2 rounded hover:bg-pink-300 self-start mt-4 transition cursor-pointer">
+        SHOP NOW
+      </button>
+    </div>
+
+    
+    <div class="bg-green-100 p-4 sm:p-6 rounded-lg w-[160px] sm:w-[200px] md:w-[220px] lg:w-[240px] flex flex-col justify-between">
+      <div>
+        <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">PARTY DECORS</h3>
+      </div>
+      <img src="cat5.png" alt="Sofa" className="mx-auto size-28 sm:size-32 md:size-36 lg:size-40" />
+      <button class="bg-blue-500 text-white text-sm px-4 py-2 rounded hover:bg-blue-400 self-start mt-4 transition cursor-pointer">
+        SHOP NOW
+      </button>
+    </div>
+
+    
+    <div class="bg-pink-100 p-4 sm:p-6 rounded-lg w-full sm:w-[300px] md:w-[340px] lg:w-[400px] flex flex-col justify-between">
+      <div>
+        <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4">DIAMOND RING</h3>
+      </div>
+      <img src="cat6.png" alt="Sofa" className="mx-auto size-28 sm:size-32 md:size-36 lg:size-40" />
+      <button class="bg-red-600 text-white text-sm px-4 py-2 rounded hover:bg-red-700 self-start mt-4 transition cursor-pointer">
+        SHOP NOW
+      </button>
+    </div>
+  </div>
+</div>
+
+     
       <NewArrivals />
       <UtkarshCollectionPosts />
       <TopSellingItems />
-
-      {/* Promo Section */}
+     
       <div className="flex flex-col lg:flex-row items-center justify-between p-8 lg:p-16 bg-white relative">
         <div className="lg:w-1/2 mb-10 lg:mb-0">
           <h2 className="text-3xl lg:text-2xl font-bold mb-6">
@@ -158,8 +159,7 @@ export default function Home() {
           />
         </div>
       </div>
-
-      {/* Perks Section */}
+      
       <div className="bg-gray-50 py-12 px-4 lg:px-20 text-center">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center space-y-4">
@@ -193,11 +193,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* Blog Posts */}
+      
       <OurBlogPosts />
-
-      {/* WhatsApp Button */}
+      
       <a
         href="https://wa.me/+919911819654"
         target="_blank"

@@ -64,6 +64,7 @@ const JewelryBlog = () => {
       <h1 className="text-2xl md:text-3xl font-semibold text-center mb-6 md:mb-8">
         From Our Blog
       </h1>
+         <hr className="w-full border-t-2 border-gray-300 mb-4" />
 
       <div className="max-w-full md:max-w-4xl mx-auto py-4 md:py-10 flex items-center justify-center gap-3 md:gap-6 relative flex-wrap md:flex-nowrap">
         
@@ -76,7 +77,7 @@ const JewelryBlog = () => {
           <Icon path={mdiChevronLeft} size={1} />
         </button>
 
-        {/* Blog Cards */}
+       
         <div className="flex gap-3 overflow-x-auto md:overflow-visible">
           {visibleSlides.map((post, idx) => (
             <div

@@ -11,7 +11,6 @@ export const Footer = () => {
   return (
     <div className="bg-black text-white px-4 py-8">
       <div className="flex flex-col md:flex-row md:justify-around gap-6 md:gap-0">
-        {/* Company Info */}
         <div className="w-full md:w-1/5 flex flex-col gap-5">
           <img className="invert size-10" src="logo.webp" alt="Logo" />
           <p className="text-xs">
@@ -19,10 +18,14 @@ export const Footer = () => {
             the latest fashion of the best quality at the lowest possible
             prices.
           </p>
-          <img className="size-10" src="instagram.webp" alt="Instagram" />
+          <a
+            href="https://www.instagram.com/utkarshcollections/"
+            target="_blank"
+          >
+            <img className="size-10" src="instagram.webp" alt="Instagram" />
+          </a>
         </div>
 
-        {/* Quick Links */}
         <div className="w-full md:w-1/5 flex flex-col gap-3 mt-4">
           <h1 className="font-bold text-sm">Quick Links</h1>
           <div className="text-xs flex flex-col gap-2">
@@ -34,7 +37,6 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Categories */}
         <div className="w-full md:w-1/5 flex flex-col gap-3 mt-4">
           <h1 className="font-bold text-sm">Categories</h1>
           <div className="text-xs flex flex-col gap-2">
@@ -52,7 +54,6 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Policies */}
         <div className="w-full md:w-1/5 flex flex-col gap-3 mt-4">
           <h1 className="font-bold text-sm">Policies</h1>
           <div className="text-xs flex flex-col gap-2">
@@ -71,7 +72,6 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Contact Info */}
         <div className="w-full md:w-1/5 flex flex-col gap-3 mt-4">
           <h1 className="font-bold text-sm">Get In Touch</h1>
           <div className="text-xs flex flex-col gap-2">
@@ -93,9 +93,7 @@ export const Footer = () => {
 
       <hr className="border-gray-700 my-6" />
 
-      <div className="text-center text-sm">
-        © 2025 Utkarsh Collections
-      </div>
+      <div className="text-center text-sm">© 2025 Utkarsh Collections</div>
     </div>
   );
 };

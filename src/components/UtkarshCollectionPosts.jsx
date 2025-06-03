@@ -4,7 +4,7 @@ import SocialPost from "./SocialPost";
 export default function UtkarshCollectionPosts() {
   return (
     <div className="mb-10 px-4">
-      {/* Instagram Header */}
+     
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-screen-xl mx-auto mb-6 sm:px-5">
         <div className="flex items-center gap-2">
           <a
@@ -38,7 +38,7 @@ export default function UtkarshCollectionPosts() {
         </a>
       </div>
 
-      {/* Social Posts */}
+     
       <div className="max-w-screen-xl mx-auto">
         <SocialPost />
       </div>
